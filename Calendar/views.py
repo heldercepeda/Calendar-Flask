@@ -5,7 +5,6 @@ from Calendar import app
 @app.route('/')
 @app.route('/home')
 def home():
-    """Renders the home page."""
     return render_template(
         'login.html'
     )
@@ -13,7 +12,6 @@ def home():
 
 @app.route('/register')
 def register():
-    """Renders the home page."""
     return render_template(
         'register.html'
     )
@@ -21,7 +19,9 @@ def register():
 
 @app.route('/calendar')
 def calendar():
-    """Renders the home page."""
     return render_template(
-        'calendar.html'
+        'calendar.html',
+        day = datetime.today().strftime("%d"),
+        month = datetime.today().strftime("%B"),
+        year = datetime.today().strftime("%Y")
     )
