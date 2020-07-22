@@ -3,6 +3,7 @@ from flask import render_template
 from Calendar import app
 
 @app.route('/')
+@app.route('/home')
 def home():
     """Renders the home page."""
     return render_template(
