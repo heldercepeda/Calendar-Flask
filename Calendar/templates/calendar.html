@@ -1,0 +1,611 @@
+﻿{% extends "layout.html" %}
+
+
+{% block content %}
+<div class="row justify-content-end mr-5">
+    <div class="col-auto align-self-center"><a href="#"><span class="material-icons">west</span></a></div>
+    <div class="col-auto align-self-center"><h1>July, 2020</h1></div>
+    <div class="col-auto align-self-center"><a href="#"><span class="material-icons">east</span></a></div>
+</div>
+<div class="container-fluid bg-dark">
+    <!-- Row with weekdays, this is only visible until md breakpoint -->
+    <div class="row d-none d-sm-none d-md-flex">
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Mon</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Tue</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Wed</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Thu</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Fri</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Sat</h5>
+        </div>
+        <div class="col mt-1 mx-1">
+            <h5 class="text-center text-light">Sun</h5>
+        </div>
+    </div>
+    <!-- 1st line of the week -->
+    <div class="row">
+        <div class="col-md m-1 rounded" style="background-color: #999999;">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>29<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Monday, 29<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 rounded" style="background-color: #999999;">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>30<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Tuesday, 30<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>01<sup>st</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Wednesday, 01<sup>st</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>02<sup>nd</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Thursday, 02<sup>nd</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>03<sup>rd</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Friday, 03<sup>rd</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>04<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Saturday, 04<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>05<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Sunday, 05<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd line of the week -->
+    <div class="row">
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>06<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Monday, 06<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>07<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Tuesday, 07<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>08<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Wednesday, 08<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>09<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Thursday, 09<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>10<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Friday, 10<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>11<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Saturday, 11<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>12<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Sunday, 12<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3rd line of the week -->
+    <div class="row">
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>13<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Monday, 13<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>14<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Tuesday, 14<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>15<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Wednesday, 15<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>16<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Thursday, 16<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>17<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Friday, 17<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>18<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Saturday, 18<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>19<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Sunday, 19<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4th line of the week -->
+    <div class="row">
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>20<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Monday, 20<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>21<sup>st</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Tuesday, 21<sup>st</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 rounded" style="background-color: #b9fade;">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>22<sup>nd</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Wednesday, 22<sup>nd</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>23<sup>rd</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Thursday, 23<sup>rd</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>24<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Friday, 24<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>25<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Saturday, 25<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>26<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Sunday, 26<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5th line of the week -->
+    <div class="row">
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>27<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Monday, 27<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>28<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Tuesday, 28<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>29<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Wednesday, 29<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>30<sup>th</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Thursday, 30<sup>th</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 bg-light rounded">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>31<sup>st</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Friday, 31<sup>st</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 rounded" style="background-color: #999999;">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>01<sup>st</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Saturday, 01<sup>st</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md m-1 rounded" style="background-color: #999999;">
+            <div class="p-2">
+                <div class="row justify-content-end d-none d-sm-none d-md-flex">
+                    <h4>02<sup>nd</sup></h4>
+                </div>
+                <div class="row justify-content-end d-flex d-sm-flex d-md-none">
+                    <h4>Sunday, 02<sup>nd</sup></h4>
+                </div>
+                <div class="row">
+                    <p>This will be the main text. Now we should have two lines of text</p>
+                </div>
+                <div class="row">
+                    <small>Something on the bottom</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
