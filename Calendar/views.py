@@ -21,6 +21,7 @@ def register():
 @app.route('/calendar')
 def calendar():
     final_list, next_month, next_month_year, prev_month, prev_month_year = list_for_calendar(month="December", year="2020")
+    print(final_list)
     return render_template(
         'calendar.html',
         final_list=final_list,

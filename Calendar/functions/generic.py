@@ -11,7 +11,6 @@ def list_for_calendar(month=None, year=None):
     if not year:
         year = pd.to_datetime(today).strftime("%Y")
     first_of_month = f'{year}-{month}-01'
-    print(first_of_month)
     table_dates = pd.DataFrame(index=[i for i in range(6)], columns=[i for i in range(7)])
     first = pd.to_datetime(first_of_month) - relativedelta(days=pd.to_datetime(first_of_month).dayofweek)
     for i in range(table_dates.shape[0]):
@@ -21,7 +20,10 @@ def list_for_calendar(month=None, year=None):
     for i in range(table_dates.shape[0]):
         week_list = []
         for j in range(table_dates.shape[1]):
-            week_list.append(table_dates.iloc[i, j].strftime("%d"))
+            day_list = []
+            day_list.append(table_dates.iloc[i, j].strftime("%d"))
+            day_list.append(table_dates.iloc[i, j].strftime("%B"))
+            week_list.append(day_list)
         final_list.append(week_list)
     next_nonth = pd.to_datetime(first_of_month) + relativedelta(months=1)
     prev_nonth = pd.to_datetime(first_of_month) - relativedelta(months=1)
