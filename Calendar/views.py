@@ -12,6 +12,8 @@ from Calendar.static.forms import RegistrationForm, LoginForm
 @app.route('/', methods=["GET","POST"])
 @app.route('/home', methods=["GET","POST"])
 def home():
+    if current_user.is_authenticated:
+        return redirect(url_for('calendar'))
     form = LoginForm()
     if form.validate_on_submit() and request.method == "POST":
         username = request.form['username']
@@ -37,6 +39,8 @@ def logout():
 
 @app.route('/register', methods=["GET","POST"])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('calendar'))
     form = RegistrationForm()
     if form.validate_on_submit() and request.method == "POST":
         hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
@@ -54,6 +58,7 @@ def register():
 
 
 @app.route('/calendar')
+@login_required
 def calendar():
     month = request.args.get('month')
     year = request.args.get('year')
