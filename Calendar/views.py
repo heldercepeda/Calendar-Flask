@@ -22,11 +22,6 @@ def register():
 
 @app.route('/calendar')
 def calendar():
-<<<<<<< HEAD
-    # This is also a comment to see what happens...
-=======
-    # This is a new comment to try something
->>>>>>> 39322f658afbb373f87411f12b308ca08d7095e6
     month = request.args.get('month')
     year = request.args.get('year')
     if not month:
