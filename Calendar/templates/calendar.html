@@ -46,10 +46,19 @@
         {% set bg_style = 'background-color: #999999;' %}
         {% set bg_class = '' %}
         {% endif %}
+        {% if final_list[i][j][0] in ["01","21","31"] %}
+        {% set sup_p = 'st' %}
+        {% elif final_list[i][j][0] in ["02","22"] %}
+        {% set sup_p = 'nd' %}
+        {% elif final_list[i][j][0] in ["03","23"] %}
+        {% set sup_p = 'rd' %}
+        {% else %}
+        {% set sup_p = 'th' %}
+        {% endif %}
         <div class="col-md m-1 {{bg_class}} rounded" style="{{bg_style}}">
             <div class="p-2">
                 <div class="row justify-content-end d-none d-sm-none d-md-flex">
-                    <h4>{{final_list[i][j][0]}}<sup>th</sup></h4>
+                    <h4>{{final_list[i][j][0]}}<sup>{{sup_p}}</sup></h4>
                 </div>
                 <div class="row justify-content-end d-flex d-sm-flex d-md-none">
                     <h4>{{final_list[i][j][3]}}, {{final_list[i][j][0]}}<sup>th</sup></h4>
