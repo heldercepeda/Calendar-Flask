@@ -6,10 +6,6 @@ import numpy as np
 
 def list_for_calendar(month=None, year=None):
     today = datetime.strftime(datetime.now(), '%Y-%m-%d')
-    if not month:
-        month = pd.to_datetime(today).strftime("%B")
-    if not year:
-        year = pd.to_datetime(today).strftime("%Y")
     first_of_month = f'{year}-{month}-01'
     table_dates = pd.DataFrame(index=[i for i in range(6)], columns=[i for i in range(7)])
     first = pd.to_datetime(first_of_month) - relativedelta(days=pd.to_datetime(first_of_month).dayofweek)
