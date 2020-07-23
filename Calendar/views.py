@@ -1,8 +1,11 @@
 from datetime import datetime
 from flask import render_template, request, redirect
+<<<<<<< HEAD
 from flask_login import login_user, logout_user, current_user, login_required
+=======
+>>>>>>> register
 
-from Calendar import app
+from Calendar import app, db, bcrypt
 from Calendar.functions.generic import list_for_calendar
 from Calendar.static.models import User
 from Calendar.static.forms import RegistrationForm, LoginForm
@@ -20,14 +23,21 @@ def home():
     )
 
 
-@app.route('/register')
+@app.route('/register', methods=["GET","POST"])
 def register():
     form = RegistrationForm()
-    return render_template(
-        'register.html',
-        title="register",
-        form=form
-    )
+    if form.validate_on_submit() and request.method == "POST":
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
+        return redirect(url_for('home'))
+    else:
+        return render_template(
+            'register.html',
+            title="register",
+            form=form
+        )
 
 
 
