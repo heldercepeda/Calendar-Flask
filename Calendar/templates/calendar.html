@@ -37,7 +37,11 @@
         {% for j in range(final_list[i].__len__()) %}
         {% if actual_month == final_list[i][j][1] and actual_year == final_list[i][j][2] %}
         {% set bg_style = '' %}
+        {% if today == final_list[i][j][4] %}
+        {% set bg_style = 'background-color: #adfaff;' %}
+        {% else %}
         {% set bg_class = 'bg-light' %}
+        {% endif %}
         {% else %}
         {% set bg_style = 'background-color: #999999;' %}
         {% set bg_class = '' %}
