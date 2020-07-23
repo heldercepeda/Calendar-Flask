@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template
+from flask import render_template, request
 from Calendar import app
 from Calendar.functions.generic import list_for_calendar
 
@@ -20,8 +20,9 @@ def register():
 
 @app.route('/calendar')
 def calendar():
-    final_list, next_month, next_month_year, prev_month, prev_month_year = list_for_calendar()
-    print(final_list)
+    month = request.args.get('month')
+    year = request.args.get('year')
+    final_list, next_month, next_month_year, prev_month, prev_month_year = list_for_calendar(month,year)
     return render_template(
         'calendar.html',
         final_list=final_list,
