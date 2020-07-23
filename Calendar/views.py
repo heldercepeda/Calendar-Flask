@@ -22,6 +22,10 @@ def register():
 def calendar():
     month = request.args.get('month')
     year = request.args.get('year')
+    if not month:
+        month = datetime.today().strftime("%B")
+    if not year:
+        year = datetime.today().strftime("%Y")
     final_list, next_month, next_month_year, prev_month, prev_month_year = list_for_calendar(month,year)
     return render_template(
         'calendar.html',
@@ -30,7 +34,7 @@ def calendar():
         next_month_year=next_month_year,
         prev_month=prev_month,
         prev_month_year=prev_month_year,
-        actual_year = datetime.today().strftime("%Y"),
-        actual_month = datetime.today().strftime("%B"),
-        actual_day = datetime.today().strftime("%d")
+        actual_year = year,
+        actual_month = month,
+        today = datetime.today().strftime("%d")
     )
