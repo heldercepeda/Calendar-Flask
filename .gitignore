@@ -3,3 +3,4 @@ Calendar.pyproj.user
 Calendar/__pycache__/
 Calendar/functions/__pycache__/
 venv/
+Calendar/static/__pycache__/
