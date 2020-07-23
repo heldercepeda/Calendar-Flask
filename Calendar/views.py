@@ -4,8 +4,8 @@ from flask_login import login_user, logout_user, current_user, login_required
 
 from Calendar import app, db, bcrypt
 from Calendar.functions.generic import list_for_calendar
-from Calendar.static.models import User
-from Calendar.static.forms import RegistrationForm, LoginForm
+from Calendar.db_assets.models import User
+from Calendar.db_assets.forms import RegistrationForm, LoginForm
 
 
 

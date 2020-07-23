@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired, Length, EqualTo, ValidationError
-from Calendar.static.models import User
+from Calendar.db_assets.models import User
 
 
 class RegistrationForm(FlaskForm):
