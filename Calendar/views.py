@@ -24,7 +24,8 @@ def register():
     form = RegistrationForm()
     return render_template(
         'register.html',
-        title="register"
+        title="register",
+        form=form
     )
 
 
