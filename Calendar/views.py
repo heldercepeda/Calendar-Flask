@@ -7,14 +7,16 @@ from Calendar.functions.generic import list_for_calendar
 @app.route('/home')
 def home():
     return render_template(
-        'login.html'
+        'login.html',
+        title="login"
     )
 
 
 @app.route('/register')
 def register():
     return render_template(
-        'register.html'
+        'register.html',
+        title="register"
     )
 
 
@@ -36,5 +38,6 @@ def calendar():
         prev_month_year=prev_month_year,
         actual_year = year,
         actual_month = month,
-        today = datetime.today().strftime('%Y-%B-%d')
+        today = datetime.today().strftime('%Y-%B-%d'),
+        title="calendar"
     )
