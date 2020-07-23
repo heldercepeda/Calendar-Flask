@@ -29,5 +29,8 @@ def calendar():
         next_month=next_month,
         next_month_year=next_month_year,
         prev_month=prev_month,
-        prev_month_year=prev_month_year
+        prev_month_year=prev_month_year,
+        actual_year = datetime.today().strftime("%Y"),
+        actual_month = datetime.today().strftime("%B"),
+        actual_day = datetime.today().strftime("%d")
     )
