@@ -16,6 +16,13 @@
             <span class="material-icons">apps</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            {% if current_user.is_authenticated %}
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{url_for("logout")}}">Logout</a>
+                </li>
+            </ul>
+            {% else %}
             <ul class="navbar-nav mr-auto">
                 {% if title == "login" %}
                 {% set active = "active" %}
@@ -33,15 +40,8 @@
                 <li class="nav-item {{active}}">
                     <a class="nav-link" href="{{url_for("register")}}">Register</a>
                 </li>
-                {% if title == "calendar" %}
-                {% set active = "active" %}
-                {% else %}
-                {% set active = "" %}
-                {% endif %}
-                <li class="nav-item {{active}}">
-                    <a class="nav-link" href="{{url_for("calendar")}}">Calendar</a>
-                </li>
             </ul>
+            {% endif %}
         </div>
     </nav>
     {% block content %}
