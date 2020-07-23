@@ -21,8 +21,10 @@ def list_for_calendar(month=None, year=None):
         week_list = []
         for j in range(table_dates.shape[1]):
             day_list = []
-            day_list.append(table_dates.iloc[i, j].strftime("%d"))
-            day_list.append(table_dates.iloc[i, j].strftime("%B"))
+            day_list.append(table_dates.iloc[i, j].strftime("%d"))  # day of month (two digits)
+            day_list.append(table_dates.iloc[i, j].strftime("%B"))  # month (full name)
+            day_list.append(table_dates.iloc[i, j].strftime("%Y"))  # year (four digits)
+            day_list.append(table_dates.iloc[i, j].strftime("%A"))  # day of week (full name)
             week_list.append(day_list)
         final_list.append(week_list)
     next_nonth = pd.to_datetime(first_of_month) + relativedelta(months=1)
