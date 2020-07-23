@@ -1,9 +1,6 @@
 from datetime import datetime
 from flask import render_template, request, redirect
-<<<<<<< HEAD
 from flask_login import login_user, logout_user, current_user, login_required
-=======
->>>>>>> register
 
 from Calendar import app, db, bcrypt
 from Calendar.functions.generic import list_for_calendar
