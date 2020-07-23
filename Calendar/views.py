@@ -1,14 +1,21 @@
 from datetime import datetime
 from flask import render_template, request
+
 from Calendar import app
 from Calendar.functions.generic import list_for_calendar
+from Calendar.static.models import User
+from Calendar.static.forms import RegistrationForm, LoginForm
+
+
 
 @app.route('/')
 @app.route('/home')
 def home():
+    form = LoginForm
     return render_template(
         'login.html',
-        title="login"
+        title="login",
+        form=form
     )
 
 
