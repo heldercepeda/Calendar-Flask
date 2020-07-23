@@ -17,13 +17,28 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                {% if title == "login" %}
+                {% set active = "active" %}
+                {% else %}
+                {% set active = "" %}
+                {% endif %}
+                <li class="nav-item {{active}}">
                     <a class="nav-link" href="{{url_for("home")}}">Login</a>
                 </li>
-                <li class="nav-item">
+                {% if title == "register" %}
+                {% set active = "active" %}
+                {% else %}
+                {% set active = "" %}
+                {% endif %}
+                <li class="nav-item {{active}}">
                     <a class="nav-link" href="{{url_for("register")}}">Register</a>
                 </li>
-                <li class="nav-item">
+                {% if title == "calendar" %}
+                {% set active = "active" %}
+                {% else %}
+                {% set active = "" %}
+                {% endif %}
+                <li class="nav-item {{active}}">
                     <a class="nav-link" href="{{url_for("calendar")}}">Calendar</a>
                 </li>
             </ul>
