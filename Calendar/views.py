@@ -36,5 +36,5 @@ def calendar():
         prev_month_year=prev_month_year,
         actual_year = year,
         actual_month = month,
-        today = datetime.today().strftime("%d")
+        today = datetime.today().strftime('%Y-%B-%d')
     )
