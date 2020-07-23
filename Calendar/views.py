@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, request
+from flask import render_template, request, redirect
 
 from Calendar import app, db, bcrypt
 from Calendar.functions.generic import list_for_calendar
