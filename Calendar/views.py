@@ -11,7 +11,7 @@ from Calendar.static.forms import RegistrationForm, LoginForm
 @app.route('/')
 @app.route('/home')
 def home():
-    form = LoginForm
+    form = LoginForm()
     return render_template(
         'login.html',
         title="login",
@@ -21,6 +21,7 @@ def home():
 
 @app.route('/register')
 def register():
+    form = RegistrationForm()
     return render_template(
         'register.html',
         title="register"
