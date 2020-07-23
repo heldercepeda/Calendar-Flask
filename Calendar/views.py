@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, request, redirect
+from flask import render_template, request, redirect, url_for
 from flask_login import login_user, logout_user, current_user, login_required
 
 from Calendar import app, db, bcrypt
@@ -9,15 +9,30 @@ from Calendar.static.forms import RegistrationForm, LoginForm
 
 
 
-@app.route('/')
+@app.route('/', methods=["GET","POST"])
 @app.route('/home', methods=["GET","POST"])
 def home():
     form = LoginForm()
+    if form.validate_on_submit() and request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+        user = User.query.filter_by(username=username).first()
+        if user and bcrypt.check_password_hash(user.password, password):
+            login_user(user, remember=False)
+            return redirect(url_for('calendar'))
+        else:
+            return redirect(url_for('home'))
     return render_template(
         'login.html',
         title="login",
         form=form
     )
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
 
 
 @app.route('/register', methods=["GET","POST"])
