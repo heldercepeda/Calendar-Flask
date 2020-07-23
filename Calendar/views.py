@@ -20,10 +20,6 @@ def register():
     )
 
 
-@app.route('/about')
-def about():
-    return "<H1>This is the about page</H1>"
-
 
 @app.route('/calendar')
 def calendar():
