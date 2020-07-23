@@ -27,7 +27,7 @@ def register():
         user = User(username=form.username.data, email=form.email.data, password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        return redirect(url_for('register'))
+        return redirect(url_for('home'))
     else:
         return render_template(
             'register.html',
