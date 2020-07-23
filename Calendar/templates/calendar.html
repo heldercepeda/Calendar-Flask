@@ -4,7 +4,7 @@
 {% block content %}
 <div class="row justify-content-end mr-5">
     <div class="col-auto align-self-center"><a href="{{url_for("calendar", month=prev_month, year=prev_month_year)}}"><span class="material-icons">west</span></a></div>
-    <div class="col-auto align-self-center"><h1>July, 2020</h1></div>
+    <div class="col-auto align-self-center"><h1>{{actual_month}}, {{actual_year}}</h1></div>
     <div class="col-auto align-self-center"><a href="{{url_for("calendar", month=next_month, year=next_month_year)}}"><span class="material-icons">east</span></a></div>
 </div>
 <div class="container-fluid bg-dark">
@@ -35,12 +35,14 @@
     {% for i in range(final_list.__len__()) %}
     <div class="row">
         {% for j in range(final_list[i].__len__()) %}
-        {% if True %}
-        {% set bg_style = "" %}
+        {% if actual_month == final_list[i][j][1] and actual_year == final_list[i][j][2] %}
+        {% set bg_style = '' %}
+        {% set bg_class = 'bg-light' %}
         {% else %}
-        {% set bg_style = "" %}
+        {% set bg_style = 'background-color: #999999;' %}
+        {% set bg_class = '' %}
         {% endif %}
-        <div class="col-md m-1 rounded" style="background-color: #999999;">
+        <div class="col-md m-1 {{bg_class}} rounded" style="{{bg_style}}">
             <div class="p-2">
                 <div class="row justify-content-end d-none d-sm-none d-md-flex">
                     <h4>{{final_list[i][j][0]}}<sup>th</sup></h4>
